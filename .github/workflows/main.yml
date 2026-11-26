@@ -16,6 +16,8 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
       - run: gradle testDebugUnitTest
       - run: gradle assembleDebug
       - uses: actions/upload-artifact@v4
